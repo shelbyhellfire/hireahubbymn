@@ -73,26 +73,25 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
-      <header className="sticky top-0 z-50 bg-blue-600 text-white shadow-lg">
+      <header className="sticky top-0 z-50 bg-red-600 text-white shadow-lg">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Wrench className="h-8 w-8" />
-            <span className="text-2xl font-bold">Hire a Hubby MN</span>
+            <span className="text-2xl font-bold font-[family-name:var(--font-outfit)]">
+              Hire a Hubby MN
+            </span>
           </div>
           <div className="hidden md:flex space-x-6">
-            <Link href="#about" className="hover:text-blue-200 transition">
+            <Link href="#about" className="hover:text-red-200 transition">
               About
             </Link>
-            <Link href="#services" className="hover:text-blue-200 transition">
+            <Link href="#services" className="hover:text-red-200 transition">
               Services
             </Link>
-            <Link href="#gallery" className="hover:text-blue-200 transition">
-              Gallery
-            </Link>
-            <Link href="#why-us" className="hover:text-blue-200 transition">
+            <Link href="#why-us" className="hover:text-red-200 transition">
               Why Us
             </Link>
-            <Link href="#contact" className="hover:text-blue-200 transition">
+            <Link href="#contact" className="hover:text-red-200 transition">
               Contact
             </Link>
           </div>
@@ -100,7 +99,7 @@ export default function Home() {
             href="https://fb.com/book/hireahubbymn/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition"
+            className="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition"
           >
             Book Now
           </a>
@@ -108,9 +107,22 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-500 to-blue-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <section className="relative bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white py-20 overflow-hidden">
+        {/* Visible diagonal stripe pattern */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              rgba(0, 0, 0, 0.1),
+              rgba(0, 0, 0, 0.1) 2px,
+              transparent 2px,
+              transparent 20px
+            )`,
+          }}
+        ></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
             Hire a Hubby MN
           </h1>
           <p className="text-2xl md:text-3xl mb-8 font-light italic">
@@ -125,7 +137,7 @@ export default function Home() {
               href="https://fb.com/book/hireahubbymn/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-xl"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-50 transition shadow-xl"
             >
               Schedule Service
             </a>
@@ -133,7 +145,7 @@ export default function Home() {
               href="https://www.facebook.com/hireahubbymn/photos"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-xl border-2 border-white"
+              className="bg-red-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-900 transition shadow-xl border-2 border-white"
             >
               View Our Work
             </a>
@@ -145,18 +157,18 @@ export default function Home() {
       <section id="about" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+            <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 font-[family-name:var(--font-outfit)]">
               Let&apos;s Be Honest...
             </h2>
             <div className="prose prose-lg mx-auto text-gray-700">
               <p className="text-xl mb-6">
                 Over the years our lifestyles have evolved into{" "}
                 <strong>digital chaos</strong>. Some of us weren&apos;t taught
-                the <em>&quot;handy&quot;</em> skills of keeping up or changing
-                a home... and some of us just don&apos;t have the <em>time</em>{" "}
-                to complete home maintenance needs.
+                the handy skills of keeping up or changing a home... and some of
+                us just don&apos;t have the <em>time</em> to complete home
+                maintenance needs.
               </p>
-              <h3 className="text-3xl font-bold text-blue-600 mb-6">
+              <h3 className="text-3xl font-bold text-red-600 mb-6 font-[family-name:var(--font-outfit)]">
                 That&apos;s where we come in!
               </h3>
               <p className="text-xl">
@@ -171,16 +183,16 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section id="why-us" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800 font-[family-name:var(--font-outfit)]">
             Why Choose Hire a Hubby?
           </h2>
           <p className="text-xl text-center mb-12 text-gray-600">
             How are we different than your neighborhood handyman?
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <Clock className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <Clock className="h-12 w-12 text-red-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Super Speedy
               </h3>
               <p className="text-gray-700">
@@ -188,9 +200,9 @@ export default function Home() {
                 the job done quickly without sacrificing quality.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <Users className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <Users className="h-12 w-12 text-red-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Great Relationships
               </h3>
               <p className="text-gray-700">
@@ -199,9 +211,9 @@ export default function Home() {
                 jokes.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <Star className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <Star className="h-12 w-12 text-red-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Attention to Detail
               </h3>
               <p className="text-gray-700">
@@ -209,9 +221,9 @@ export default function Home() {
                 is done right the first time.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
-              <Shield className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+              <Shield className="h-12 w-12 text-red-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Honest Opinion
               </h3>
               <p className="text-gray-700">
@@ -219,9 +231,9 @@ export default function Home() {
                 asked for) - no upselling or unnecessary work.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
               <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Reasonable Rates
               </h3>
               <p className="text-gray-700">
@@ -229,9 +241,9 @@ export default function Home() {
                 work - that&apos;s our promise.
               </p>
             </div>
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
+            <div className="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition">
               <div className="text-4xl mb-4">🛠️</div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">
+              <h3 className="text-xl font-bold mb-3 text-gray-800 font-[family-name:var(--font-outfit)]">
                 Full Service
               </h3>
               <p className="text-gray-700">
@@ -243,10 +255,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="py-16 bg-white">
+      {/* Gallery Section - COMMENTED OUT FOR NOW */}
+      {/* <section id="gallery" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-4 text-gray-800 font-[family-name:var(--font-outfit)]">
             Our Work
           </h2>
           <p className="text-xl text-center mb-12 text-gray-600">
@@ -254,18 +266,18 @@ export default function Home() {
           </p>
           <ImageGallery images={galleryImages} />
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 font-[family-name:var(--font-outfit)]">
             Our Services
           </h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">
+                <h3 className="text-xl font-bold mb-3 text-red-600 font-[family-name:var(--font-outfit)]">
                   Home Maintenance
                 </h3>
                 <ul className="space-y-2 text-gray-700">
@@ -277,7 +289,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">
+                <h3 className="text-xl font-bold mb-3 text-red-600 font-[family-name:var(--font-outfit)]">
                   Remodeling
                 </h3>
                 <ul className="space-y-2 text-gray-700">
@@ -289,7 +301,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">
+                <h3 className="text-xl font-bold mb-3 text-red-600 font-[family-name:var(--font-outfit)]">
                   Installations
                 </h3>
                 <ul className="space-y-2 text-gray-700">
@@ -301,7 +313,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-3 text-blue-600">
+                <h3 className="text-xl font-bold mb-3 text-red-600 font-[family-name:var(--font-outfit)]">
                   Outdoor Work
                 </h3>
                 <ul className="space-y-2 text-gray-700">
@@ -318,9 +330,11 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-blue-600 text-white">
+      <section id="contact" className="py-16 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <h2 className="text-4xl font-bold mb-6 font-[family-name:var(--font-outfit)]">
+            Ready to Get Started?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Tell us about your needs and timeline. Check out what we&apos;ve
             done so far, then let&apos;s discuss your project!
@@ -330,7 +344,7 @@ export default function Home() {
               href="https://fb.com/book/hireahubbymn/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-xl inline-flex items-center justify-center gap-2"
+              className="bg-white text-red-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-50 transition shadow-xl inline-flex items-center justify-center gap-2"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -341,7 +355,7 @@ export default function Home() {
               href="https://www.facebook.com/hireahubbymn/photos"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-900 transition shadow-xl border-2 border-white"
+              className="bg-red-800 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-900 transition shadow-xl border-2 border-white"
             >
               View Our Portfolio
             </a>
@@ -355,7 +369,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Wrench className="h-6 w-6" />
-              <span className="text-xl font-bold">Hire a Hubby MN</span>
+              <span className="text-xl font-bold font-[family-name:var(--font-outfit)]">
+                Hire a Hubby MN
+              </span>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400">

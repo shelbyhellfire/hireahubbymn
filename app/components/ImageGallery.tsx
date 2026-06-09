@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
 import { X } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 export interface GalleryImage {
   id: number;
@@ -37,7 +37,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
             onClick={() => setSelectedCategory(category)}
             className={`px-6 py-2 rounded-full font-semibold capitalize transition ${
               selectedCategory === category
-                ? "bg-blue-600 text-white shadow-lg"
+                ? "bg-red-600 text-white shadow-lg"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
           >
@@ -96,9 +96,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
               sizes="100vw"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-              <h2 className="text-2xl font-bold mb-2">
-                {selectedImage.title}
-              </h2>
+              <h2 className="text-2xl font-bold mb-2">{selectedImage.title}</h2>
               <p className="text-lg capitalize">{selectedImage.category}</p>
             </div>
           </div>
